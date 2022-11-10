@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block sub_menu_list %}
+<div class="sub-menu">
+    <ul>
+        <li><a href="/category">Category</a></li>
+        <li><a href="/product">Product</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block workspace %}
+<div class="workspace">
+    <h3>Form Administration - Category</h3>
+
+    <form action="/category/{{catgr.id}}" method="POST">
+        <label for="name">Nama :</label>
+        <input type="text" name="name" id="name" value="{{catgr.name}}"/>
+
+
+        <input type="submit" name="submit" id="">
+    </form>
+</div>
+{% endblock %}

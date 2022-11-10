@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block category_list %}
+<div class="categories">
+    <ul>
+        {% for item in catgrs %}
+        <li>
+            <a href="/product/by/catgr-id/{{item.id}}">{{item.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+
+{% block workspace %}
+<div class="workspace">
+    <ul>
+        {% for item in products %}
+        <li>
+            <a href="/product/selected/{{item.id}}">{{item.code}} - {{ item.name }} - {{ item.price }}</a>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

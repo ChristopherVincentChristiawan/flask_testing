@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block sub_menu_list %}
+<div class="sub-menu">
+    <ul>
+        <li><a href="/category">Category</a></li>
+        <li><a href="/product">Product</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block workspace %}
+<div class="workspace">
+    <h3>Form Administration - Product</h3>
+
+    <form action="/product/{{product.id}}" method="POST">
+        <label for="code">Kode :</label>
+        <input type="text" name="code" id="code" value="{{product.code}}"/>
+        <label for="name">Nama :</label>
+        <input type="text" name="name" id="name" value="{{product.name}}"/>
+        <label for="price">Harga :</label>
+        <input type="text" name="price" id="price" value="{{product.price}}"/>
+        <label for="catgr_id">Id Kategori :</label>
+        <input type="text" name="catgr_id" id="catgr_id" value="{{product.catgr_id}}"/>
+
+        
+        <input type="submit" name="submit" id="">
+    </form>
+</div>
+{% endblock %}

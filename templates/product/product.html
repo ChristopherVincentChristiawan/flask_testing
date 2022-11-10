@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block sub_menu_list %}
+<div class="sub-menu">
+    <ul>
+        <li><a href="/category">Category</a></li>
+        <li><a href="/product">Product</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block workspace %}
+<div class="workspace">
+    <h3>Welcome to Product Admin Page</h3>
+
+    <a href="/product/">New Product</a>
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category Id</th>
+            <th>Modify</th>
+            <th>Delete</th>
+        </thead>
+       <tbody>
+        {% for item in products %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.code}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.catgrId}}</td>
+            <td><a href="/product/{{item.id}}">Open</a></td>
+            <td><a href="/delete/product/{{item.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+       </tbody>
+    </table>
+
+    
+
+</div>
+{% endblock %}

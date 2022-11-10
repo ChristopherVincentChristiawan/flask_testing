@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block workspace %}
+<div class="workspace">
+    <h3>Cart</h3>
+    <h3>{{message}}</h3>
+    <table class=table_cart>
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th></th>
+
+        </tr>
+        {% for item in cart_list %}
+        <tr>
+            <td>{{item['id']}}</td>
+            <td>{{item['name']}}</td>
+            <td>{{item['price']}}</td>
+            <td>
+                <a href="/delete/product/from/cart/{{item.id}}">Remove</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <div class=check_belanja>
+        <a href="/login-client"> Check Out</a>
+        <a href="/cart/clear"> Clear Cart</a>
+        <a href="/home">Belanja Lagi</a>
+    </div>
+
+</div>
+{% endblock %}

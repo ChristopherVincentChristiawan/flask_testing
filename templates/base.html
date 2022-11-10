@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Owlie's Store</title>
+        <link rel="stylesheet" href="/static/stylesheets/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h2>Owlie's Store</h2>
+
+            <ol>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/cart">Cart</a></li>
+                <li><a href="/login-admin">Admin</a></li>
+                <li><a href="/profile">Profile</a></li>
+            </ol>
+        </div>
+
+        {% block login %}
+        {% endblock %}
+
+        {% block category_list %}
+        {% endblock %}
+        
+        {% block sub_menu_list %}
+        {% endblock %}
+
+        {% block workspace %}
+        {% endblock %}
+    </body>
+</html>

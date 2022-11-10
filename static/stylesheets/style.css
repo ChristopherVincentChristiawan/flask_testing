@@ -1,0 +1,18 @@
+.header {
+    border: 1px solid black;
+}
+
+.categories {
+    border: 1px solid blue;
+    margin-top: 10px;
+}
+
+.sub-menu {
+    border: 1px solid blue;
+    margin-top: 10px;
+}
+
+.workspace {
+    border: 1px solid green;
+    margin-top: 10px;
+}

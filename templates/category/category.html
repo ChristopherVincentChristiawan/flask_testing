@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block sub_menu_list %}
+<div class="sub-menu">
+    <ul>
+        <li><a href="/category">Category</a></li>
+        <li><a href="/product">Product</a></li>
+    </ul>
+</div>
+{% endblock %}
+
+{% block workspace %}
+<div class="workspace">
+    <h3>Welcome to Category Admin Page</h3>
+
+    <a href="/category/">New Category</a>
+
+    <table>
+        <thead>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Modify</th>
+            <th>Delete</th>
+        </thead>
+       <tbody>
+        {% for item in catgrs %}
+        <tr>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td><a href="/category/{{item.id}}">Open</a></td>
+            <td><a href="/delete/category/{{item.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+       </tbody>
+    </table>
+
+    
+
+</div>
+{% endblock %}
